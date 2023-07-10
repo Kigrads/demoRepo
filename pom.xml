@@ -88,28 +88,12 @@
 					<target>11</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-					<attachClasses>true</attachClasses>
-					<classesClassifier>classes</classesClassifier>
-					<packagingExcludes>src/,node_modules/</packagingExcludes>
-					<packagingExcludes>dist/</packagingExcludes>
-				</configuration>
-			</plugin>
+			
 			<!-- Plugin to execute command "npm install" and "npm run build" inside 
 				/src/main/javascript directory -->
 			<plugin>
 				<groupId>com.github.eirslett</groupId>
-				<artifactId>frontend-maven-plugin</artifactId>
-				<configuration>
-					<workingDirectory>src/main/javascript/</workingDirectory>
-					<installDirectory>temp</installDirectory>
-				</configuration>
+				
 				<executions>
 					<!-- It will install nodejs and npm -->
 					 <execution> 
@@ -160,14 +144,6 @@
 						<configuration>
 							<overwrite>true</overwrite>
 							<outputDirectory>${project.build.directory}/${project.build.finalName}/</outputDirectory>
-							<resources>
-							<resource>
-								<directory>${project.basedir}/src/main/webapp/</directory>
-							</resource>
-							<resource>
-								<directory>${project.basedir}/src/main/webapp/dist</directory>
-							</resource>
-							</resources>
 						</configuration>
 					</execution>
 				</executions>
