@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.edurekademo.tutorial</groupId>
-    <artifactId>addressbook</artifactId>
+    <artifactId>demoRepo</artifactId>
     <version>1.1.1-SNAPSHOT</version><!--test-->
     <packaging>pom</packaging>
     <name>Address Book Edureka Demo</name>
-    <url>https://github.com/SeshagiriSriram/addressbook</url>
+    <url>https://github.com/kigrads/demoRepo</url>
     <properties>
         <build.number>SNAPSHOT</build.number>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,9 +15,9 @@
         <!-- A workaround for a bug in PMD -->
         <sourceJdk>1.8</sourceJdk>
         <targetJdk>1.8</targetJdk>
-        <github.account>SeshagiriSriram</github.account>
+        <github.account>kigrads</github.account>
         <thucydides.version>0.9.268</thucydides.version>
-        <jelastic.context>addressbook</jelastic.context>
+        <jelastic.context>demoRepo</jelastic.context>
     </properties>
 
 	<distributionManagement>
@@ -35,8 +35,8 @@
 	</distributionManagement>
 	
 	    <scm>
-        <connection>scm:git:git@github.com:${github.account}/addressbook.git</connection>
-        <developerConnection>scm:git:git@github.com:${github.account}/addressbook.git</developerConnection>
+        <connection>scm:git:git@github.com:${github.account}/demoRepo.git</connection>
+        <developerConnection>scm:git:git@github.com:${github.account}/demoRepo.git</developerConnection>
         <url>scm:git:git@github.com:${github.account}/game-of-life.git</url>
       <!-- <tag>1.0.5</tag> --> 
     <tag>HEAD</tag>
@@ -79,7 +79,7 @@
 
 
  <modules>
-        <module>addressbook_main</module>
+        <module>demoRepo_main</module>
     </modules>
 
 
