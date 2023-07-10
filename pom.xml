@@ -78,9 +78,6 @@
     </pluginRepositories>
 
 
- <modules>
-        <module>demoRepo_main</module>
-    </modules>
 
 
 </project>
