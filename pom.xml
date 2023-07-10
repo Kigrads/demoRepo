@@ -77,9 +77,6 @@
     </pluginRepository>
     </pluginRepositories>
 
-	 <modules>
-        <module>views</module>
-    </modules>
 
 
 
