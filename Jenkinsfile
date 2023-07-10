@@ -1,6 +1,8 @@
 pipeline {
     agent any
+    #comment
     stages {
+
         stage('Compile') {
             steps { 
                 sh 'mvn compile'
