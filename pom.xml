@@ -93,7 +93,7 @@
 				/src/main/javascript directory -->
 			<plugin>
 				<groupId>com.github.eirslett</groupId>
-				
+				<artifactId>frontend-maven-plugin</artifactId>
 				<executions>
 					<!-- It will install nodejs and npm -->
 					 <execution> 
