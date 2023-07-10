@@ -77,79 +77,7 @@
     </pluginRepository>
     </pluginRepositories>
 
-<build>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>11</source>
-					<target>11</target>
-				</configuration>
-			</plugin>
-			
-			<!-- Plugin to execute command "npm install" and "npm run build" inside 
-				/src/main/javascript directory -->
-			<plugin>
-				<groupId>com.github.eirslett</groupId>
-				<artifactId>frontend-maven-plugin</artifactId>
-				<executions>
-					<!-- It will install nodejs and npm -->
-					 <execution> 
-						 <id>install node and npm</id>
-						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-						<configuration>
-							<nodeVersion>v10.14.1</nodeVersion>
-							<npmVersion>3.10.10</npmVersion>
-						</configuration>
-					</execution>
-					<!-- It will execute command "npm install" inside "/src/main/javascript" 
-						directory -->
-					<execution>
-						<id>npm install</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>install</arguments>
-						</configuration>
-					</execution>
-					<!-- It will execute command "npm build" inside "/src/main/javascript" 
-						directory to clean and create "/dist" directory -->
-					 <execution>
-						<id>npm build</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>run build</arguments>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.4.2</version>
-				<executions>
-					<execution>
-						<id>default-copy-resources</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<overwrite>true</overwrite>
-							<outputDirectory>${project.build.directory}/${project.build.finalName}/</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 
 
 </project>
